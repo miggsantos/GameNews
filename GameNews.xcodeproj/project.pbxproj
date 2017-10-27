@@ -7,17 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */; };
+		93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */; };
+		93E611CC1FA2B81D00C0A703 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */; };
+		93E611CD1FA2B81D00C0A703 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C31FA2B81C00C0A703 /* OpenSans-Light.ttf */; };
+		93E611CE1FA2B81D00C0A703 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C41FA2B81C00C0A703 /* OpenSans-Bold.ttf */; };
+		93E611CF1FA2B81D00C0A703 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C51FA2B81C00C0A703 /* OpenSans-BoldItalic.ttf */; };
+		93E611D01FA2B81D00C0A703 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C61FA2B81D00C0A703 /* OpenSans-ExtraBoldItalic.ttf */; };
+		93E611D11FA2B81D00C0A703 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C71FA2B81D00C0A703 /* OpenSans-Regular.ttf */; };
+		93E611D21FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C81FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf */; };
+		93E611D31FA2B81D00C0A703 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C91FA2B81D00C0A703 /* OpenSans-Semibold.ttf */; };
+		93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */; };
+		93E611D71FA2C7C400C0A703 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D61FA2C7C400C0A703 /* ContainerVC.swift */; };
+		93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D91FA2CA6E00C0A703 /* Constants.swift */; };
+		93E611DD1FA2CC9A00C0A703 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */; };
 		93E757641FA1566F00955418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E757631FA1566F00955418 /* AppDelegate.swift */; };
-		93E757661FA1566F00955418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E757651FA1566F00955418 /* ViewController.swift */; };
+		93E757661FA1566F00955418 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E757651FA1566F00955418 /* NewsVC.swift */; };
 		93E757691FA1566F00955418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E757671FA1566F00955418 /* Main.storyboard */; };
 		93E7576B1FA1566F00955418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576A1FA1566F00955418 /* Assets.xcassets */; };
 		93E7576E1FA1566F00955418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576C1FA1566F00955418 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		93E611C31FA2B81C00C0A703 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		93E611C41FA2B81C00C0A703 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		93E611C51FA2B81C00C0A703 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		93E611C61FA2B81D00C0A703 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		93E611C71FA2B81D00C0A703 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		93E611C81FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		93E611C91FA2B81D00C0A703 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideMenuVC.swift; sourceTree = "<group>"; };
+		93E611D61FA2C7C400C0A703 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		93E611D91FA2CA6E00C0A703 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		93E757601FA1566F00955418 /* GameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E757631FA1566F00955418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93E757651FA1566F00955418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93E757651FA1566F00955418 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		93E757681FA1566F00955418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93E7576A1FA1566F00955418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E7576D1FA1566F00955418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +63,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93E611BB1FA2B7DB00C0A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93E757651FA1566F00955418 /* NewsVC.swift */,
+				93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */,
+				93E611D61FA2C7C400C0A703 /* ContainerVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93E611BC1FA2B7E400C0A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93E611BD1FA2B7ED00C0A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93E611BE1FA2B7F500C0A703 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93E611C41FA2B81C00C0A703 /* OpenSans-Bold.ttf */,
+				93E611C51FA2B81C00C0A703 /* OpenSans-BoldItalic.ttf */,
+				93E611C81FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf */,
+				93E611C61FA2B81D00C0A703 /* OpenSans-ExtraBoldItalic.ttf */,
+				93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */,
+				93E611C31FA2B81C00C0A703 /* OpenSans-Light.ttf */,
+				93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */,
+				93E611C71FA2B81D00C0A703 /* OpenSans-Regular.ttf */,
+				93E611C91FA2B81D00C0A703 /* OpenSans-Semibold.ttf */,
+				93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93E611BF1FA2B7FC00C0A703 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93E611D81FA2CA4F00C0A703 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				93E611D91FA2CA6E00C0A703 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		93E611DB1FA2CC6C00C0A703 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		93E757571FA1566F00955418 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +146,14 @@
 		93E757621FA1566F00955418 /* GameNews */ = {
 			isa = PBXGroup;
 			children = (
+				93E611DB1FA2CC6C00C0A703 /* Protocols */,
+				93E611D81FA2CA4F00C0A703 /* Utilities */,
+				93E611BF1FA2B7FC00C0A703 /* Extensions */,
+				93E611BE1FA2B7F500C0A703 /* Resources */,
+				93E611BD1FA2B7ED00C0A703 /* Model */,
+				93E611BC1FA2B7E400C0A703 /* View */,
+				93E611BB1FA2B7DB00C0A703 /* Controller */,
 				93E757631FA1566F00955418 /* AppDelegate.swift */,
-				93E757651FA1566F00955418 /* ViewController.swift */,
 				93E757671FA1566F00955418 /* Main.storyboard */,
 				93E7576A1FA1566F00955418 /* Assets.xcassets */,
 				93E7576C1FA1566F00955418 /* LaunchScreen.storyboard */,
@@ -124,8 +222,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E7576E1FA1566F00955418 /* LaunchScreen.storyboard in Resources */,
+				93E611D11FA2B81D00C0A703 /* OpenSans-Regular.ttf in Resources */,
+				93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */,
+				93E611D31FA2B81D00C0A703 /* OpenSans-Semibold.ttf in Resources */,
+				93E611CE1FA2B81D00C0A703 /* OpenSans-Bold.ttf in Resources */,
+				93E611CD1FA2B81D00C0A703 /* OpenSans-Light.ttf in Resources */,
 				93E7576B1FA1566F00955418 /* Assets.xcassets in Resources */,
 				93E757691FA1566F00955418 /* Main.storyboard in Resources */,
+				93E611CF1FA2B81D00C0A703 /* OpenSans-BoldItalic.ttf in Resources */,
+				93E611D01FA2B81D00C0A703 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				93E611CC1FA2B81D00C0A703 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */,
+				93E611D21FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E757661FA1566F00955418 /* ViewController.swift in Sources */,
+				93E611DD1FA2CC9A00C0A703 /* CenterVCDelegate.swift in Sources */,
+				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
+				93E611D71FA2C7C400C0A703 /* ContainerVC.swift in Sources */,
+				93E757661FA1566F00955418 /* NewsVC.swift in Sources */,
+				93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */,
 				93E757641FA1566F00955418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,11 +389,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -292,11 +405,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
