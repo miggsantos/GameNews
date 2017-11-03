@@ -13,22 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    fileprivate var containerVC = ContainerVC()
-    
-    var MenuContainerVC: ContainerVC {
-        return containerVC
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        containerVC = ContainerVC()
-        
-        window?.rootViewController = ContainerVC()
-        window?.makeKeyAndVisible()
-        
-        
+
         return true
+    }
+    
+    class func getAppDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

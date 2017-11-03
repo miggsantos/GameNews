@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D57771FACCE3700AE90DB /* SWRevealViewController.m */; };
+		931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57791FACF6A700AE90DB /* BaseVC.swift */; };
+		9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373243C1FA3F9CF007B155C /* AboutVC.swift */; };
 		93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */; };
 		93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */; };
 		93E611CC1FA2B81D00C0A703 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */; };
@@ -18,9 +21,8 @@
 		93E611D21FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C81FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf */; };
 		93E611D31FA2B81D00C0A703 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C91FA2B81D00C0A703 /* OpenSans-Semibold.ttf */; };
 		93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */; };
-		93E611D71FA2C7C400C0A703 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D61FA2C7C400C0A703 /* ContainerVC.swift */; };
 		93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611D91FA2CA6E00C0A703 /* Constants.swift */; };
-		93E611DD1FA2CC9A00C0A703 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */; };
+		93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */; };
 		93E757641FA1566F00955418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E757631FA1566F00955418 /* AppDelegate.swift */; };
 		93E757661FA1566F00955418 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E757651FA1566F00955418 /* NewsVC.swift */; };
 		93E757691FA1566F00955418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E757671FA1566F00955418 /* Main.storyboard */; };
@@ -29,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931D57751FACCDE900AE90DB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.h; sourceTree = "<group>"; };
+		931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameNews-Bridging-Header.h"; sourceTree = "<group>"; };
+		931D57771FACCE3700AE90DB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		931D57791FACF6A700AE90DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		9373243C1FA3F9CF007B155C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
@@ -40,9 +47,8 @@
 		93E611C81FA2B81D00C0A703 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		93E611C91FA2B81D00C0A703 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideMenuVC.swift; sourceTree = "<group>"; };
-		93E611D61FA2C7C400C0A703 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		93E611D91FA2CA6E00C0A703 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
 		93E757601FA1566F00955418 /* GameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E757631FA1566F00955418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E757651FA1566F00955418 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
@@ -68,7 +74,8 @@
 			children = (
 				93E757651FA1566F00955418 /* NewsVC.swift */,
 				93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */,
-				93E611D61FA2C7C400C0A703 /* ContainerVC.swift */,
+				9373243C1FA3F9CF007B155C /* AboutVC.swift */,
+				931D57791FACF6A700AE90DB /* BaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -76,6 +83,7 @@
 		93E611BC1FA2B7E400C0A703 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +115,9 @@
 		93E611BF1FA2B7FC00C0A703 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				931D57771FACCE3700AE90DB /* SWRevealViewController.m */,
+				931D57751FACCDE900AE90DB /* SWRevealViewController.h */,
+				931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,7 +133,6 @@
 		93E611DB1FA2CC6C00C0A703 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				93E611DC1FA2CC9A00C0A703 /* CenterVCDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 				TargetAttributes = {
 					93E7575F1FA1566F00955418 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,9 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E611DD1FA2CC9A00C0A703 /* CenterVCDelegate.swift in Sources */,
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
-				93E611D71FA2C7C400C0A703 /* ContainerVC.swift in Sources */,
+				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,
+				9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */,
+				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
+				931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */,
 				93E757661FA1566F00955418 /* NewsVC.swift in Sources */,
 				93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */,
 				93E757641FA1566F00955418 /* AppDelegate.swift in Sources */,
@@ -386,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
@@ -393,6 +407,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameNews/Extensions/GameNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -402,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
@@ -409,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameNews/Extensions/GameNews-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
