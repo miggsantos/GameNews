@@ -16,6 +16,9 @@
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Reveal View Controller-->
@@ -158,7 +161,59 @@
                     <view key="view" contentMode="scaleToFill" id="Mz6-7S-JO4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Game News App was made for everyone that is passionate about games!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnj-6U-J6J">
+                                <rect key="frame" x="20" y="190" width="335" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="MNX-7g-zRJ"/>
+                                    <constraint firstAttribute="height" constant="73" id="Ww1-9b-5lW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It was also made to show case my personal abilities in IOS Developent!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hME-GR-KIo">
+                                <rect key="frame" x="20" y="281" width="335" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="b4a-js-dYK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="m38-uj-Go2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="40W-hc-ZcZ">
+                                <rect key="frame" x="20" y="436" width="184.5" height="23.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-QA-WH7">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-Yd-1yy">
+                                        <rect key="frame" x="116.5" y="0.0" width="68" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23.5" id="7rL-m0-aUL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="40W-hc-ZcZ" firstAttribute="top" secondItem="hME-GR-KIo" secondAttribute="bottom" constant="82" id="4Cf-Te-bo9"/>
+                            <constraint firstItem="hME-GR-KIo" firstAttribute="leading" secondItem="Elz-ql-Y8i" secondAttribute="leading" constant="20" id="6ck-yk-Tar"/>
+                            <constraint firstItem="Elz-ql-Y8i" firstAttribute="trailing" secondItem="hME-GR-KIo" secondAttribute="trailing" constant="20" id="7Td-Lv-ZDL"/>
+                            <constraint firstItem="pnj-6U-J6J" firstAttribute="top" secondItem="Elz-ql-Y8i" secondAttribute="top" constant="126" id="7et-B4-cYa"/>
+                            <constraint firstItem="40W-hc-ZcZ" firstAttribute="leading" secondItem="Elz-ql-Y8i" secondAttribute="leading" constant="20" id="AOy-qQ-cd3"/>
+                            <constraint firstItem="Elz-ql-Y8i" firstAttribute="trailing" secondItem="pnj-6U-J6J" secondAttribute="trailing" constant="20" id="Gr7-O1-fjS"/>
+                            <constraint firstItem="pnj-6U-J6J" firstAttribute="leading" secondItem="Elz-ql-Y8i" secondAttribute="leading" constant="20" id="Tzu-HA-wvW"/>
+                            <constraint firstItem="hME-GR-KIo" firstAttribute="top" secondItem="pnj-6U-J6J" secondAttribute="bottom" constant="18" id="rev-K4-hhV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Elz-ql-Y8i"/>
                     </view>
                     <navigationItem key="navigationItem" id="T4L-er-c4e">
@@ -166,11 +221,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="XgJ-Bz-Ooc" id="2XM-go-sw1"/>
+                        <outlet property="versionLabel" destination="4UE-Yd-1yy" id="cZd-q2-Xxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1P-ho-C25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="1066"/>
+            <point key="canvasLocation" x="597.60000000000002" y="1065.5172413793105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4lJ-GA-dqS">

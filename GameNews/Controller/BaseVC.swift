@@ -33,10 +33,14 @@ class BaseVC: UIViewController {
     func customizeNavBar() {
 
         navigationController?.navigationBar.tintColor = COLOR_GN_ORANGE
-        navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        navigationController?.navigationBar.barTintColor = COLOR_GN_DARK_GRAY
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: COLOR_GN_ORANGE]
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent 
     }
 
 

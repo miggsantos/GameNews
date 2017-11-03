@@ -24,4 +24,5 @@ let CELL_LEFT_MENU = "LeftMenuCell"
 // Colors
 
 let COLOR_GN_ORANGE: UIColor = UIColor(red: 255/255, green: 132/255, blue: 0/255, alpha: 1)
+let COLOR_GN_DARK_GRAY: UIColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
 
