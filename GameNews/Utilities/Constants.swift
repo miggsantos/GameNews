@@ -19,6 +19,7 @@ let VC_ABOUT = "AboutVC"
 
 // TableViewCells
 let CELL_LEFT_MENU = "LeftMenuCell"
+let CELL_NEWS = "NewsCell"
 
 
 // Colors

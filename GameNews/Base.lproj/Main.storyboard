@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VRE-V1-Ut3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,7 +26,7 @@
             <objects>
                 <viewController id="VRE-V1-Ut3" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ed-7w-NEd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QZU-RC-iXv"/>
@@ -45,12 +45,78 @@
             <objects>
                 <viewController storyboardIdentifier="NewsVC" id="BYZ-38-t0r" customClass="NewsVC" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vko-uj-vxO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="260" id="G2G-3M-vSp" customClass="NewsCell" customModule="GameNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G2G-3M-vSp" id="3UF-0Z-Rp7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="259.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dx5-g8-qoM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="190" id="f5r-2Z-tOV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call of Duty WWII Players Can Watch Each Other Open Loot Boxes" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs9-7M-cWS">
+                                                    <rect key="frame" x="8" y="198" width="398" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="K5k-DD-NYh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YdA-Oy-kgV">
+                                                    <rect key="frame" x="8" y="256" width="169.33333333333334" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCHARCADE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-UM-dty">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="21"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 20:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-rm-FLD">
+                                                            <rect key="frame" x="98.333333333333314" y="0.0" width="71" height="21"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="3oH-w6-2eZ"/>
+                                                        <constraint firstAttribute="height" constant="21" id="I9t-zM-faR"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YdA-Oy-kgV" firstAttribute="top" secondItem="xs9-7M-cWS" secondAttribute="bottom" constant="8" id="1cG-Vm-rfG"/>
+                                                <constraint firstItem="xs9-7M-cWS" firstAttribute="leading" secondItem="3UF-0Z-Rp7" secondAttribute="leading" constant="8" id="5S3-Z3-cwc"/>
+                                                <constraint firstItem="YdA-Oy-kgV" firstAttribute="leading" secondItem="3UF-0Z-Rp7" secondAttribute="leading" constant="8" id="HkY-Qr-YuG"/>
+                                                <constraint firstItem="xs9-7M-cWS" firstAttribute="top" secondItem="dx5-g8-qoM" secondAttribute="bottom" constant="8" id="LhE-Kw-Mlj"/>
+                                                <constraint firstItem="YdA-Oy-kgV" firstAttribute="top" secondItem="xs9-7M-cWS" secondAttribute="bottom" constant="8" id="Nlp-Mn-jnq"/>
+                                                <constraint firstItem="dx5-g8-qoM" firstAttribute="leading" secondItem="3UF-0Z-Rp7" secondAttribute="leading" id="RUj-22-9AK"/>
+                                                <constraint firstAttribute="trailing" secondItem="xs9-7M-cWS" secondAttribute="trailing" constant="8" id="Rlo-3F-02B"/>
+                                                <constraint firstAttribute="trailing" secondItem="dx5-g8-qoM" secondAttribute="trailing" id="TbI-nQ-CEc"/>
+                                                <constraint firstItem="dx5-g8-qoM" firstAttribute="top" secondItem="3UF-0Z-Rp7" secondAttribute="top" id="cI0-bd-6oL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="date" destination="ba7-rm-FLD" id="HUG-GF-6uM"/>
+                                            <outlet property="newsImage" destination="dx5-g8-qoM" id="V3F-iw-EPA"/>
+                                            <outlet property="source" destination="eNn-UM-dty" id="5MI-WL-Ygj"/>
+                                            <outlet property="title" destination="xs9-7M-cWS" id="mgy-QK-aUk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,22 +133,23 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="GPE-26-i0O" id="bUu-Vi-HPi"/>
+                        <outlet property="tableView" destination="vko-uj-vxO" id="oI4-ot-jSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-484"/>
+            <point key="canvasLocation" x="556.52173913043487" y="-485.054347826087"/>
         </scene>
         <!--Left Side MenuVC-->
         <scene sceneID="b75-2n-vy0">
             <objects>
                 <viewController storyboardIdentifier="LeftSideMenuVC" id="0J1-KM-2nQ" customClass="LeftSideMenuVC" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EgU-u5-uOX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="hBG-cB-W7A">
-                                <rect key="frame" x="50" y="40" width="165.5" height="38.5"/>
+                                <rect key="frame" x="49.999999999999986" y="40" width="165.66666666666663" height="38.666666666666657"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -101,11 +168,11 @@
                                         <rect key="frame" x="0.0" y="28" width="246" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zbf-5c-3wg" id="Zou-If-KgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="246" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="246" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platforms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-cI-Trh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="246" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="246" height="43.666666666666664"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,11 +226,11 @@
             <objects>
                 <viewController storyboardIdentifier="AboutVC" id="yY2-aM-WCB" customClass="AboutVC" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mz6-7S-JO4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Game News App was made for everyone that is passionate about games!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnj-6U-J6J">
-                                <rect key="frame" x="20" y="190" width="335" height="73"/>
+                                <rect key="frame" x="20" y="190" width="374" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="MNX-7g-zRJ"/>
                                     <constraint firstAttribute="height" constant="73" id="Ww1-9b-5lW"/>
@@ -173,7 +240,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It was also made to show case my personal abilities in IOS Developent!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hME-GR-KIo">
-                                <rect key="frame" x="20" y="281" width="335" height="73"/>
+                                <rect key="frame" x="20" y="281" width="374" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="b4a-js-dYK"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="m38-uj-Go2"/>
@@ -183,16 +250,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="40W-hc-ZcZ">
-                                <rect key="frame" x="20" y="436" width="184.5" height="23.5"/>
+                                <rect key="frame" x="20" y="436" width="184" height="23.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-QA-WH7">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="23.666666666666668"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-Yd-1yy">
-                                        <rect key="frame" x="116.5" y="0.0" width="68" height="23.5"/>
+                                        <rect key="frame" x="116.33333333333334" y="0.0" width="67.666666666666657" height="23.666666666666668"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -234,7 +301,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xwM-oy-awv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cu8-J8-J04">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -252,7 +319,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vJj-oz-AOC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sOG-Bi-tOq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D57771FACCE3700AE90DB /* SWRevealViewController.m */; };
 		931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57791FACF6A700AE90DB /* BaseVC.swift */; };
+		931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D577B1FAD0F3A00AE90DB /* NewsCell.swift */; };
 		9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373243C1FA3F9CF007B155C /* AboutVC.swift */; };
 		93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */; };
 		93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */; };
@@ -35,6 +36,7 @@
 		931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameNews-Bridging-Header.h"; sourceTree = "<group>"; };
 		931D57771FACCE3700AE90DB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		931D57791FACF6A700AE90DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		931D577B1FAD0F3A00AE90DB /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		9373243C1FA3F9CF007B155C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */,
+				931D577B1FAD0F3A00AE90DB /* NewsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
+				931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */,
 				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,
 				9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */,
 				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
