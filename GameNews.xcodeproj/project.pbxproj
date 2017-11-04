@@ -29,9 +29,12 @@
 		93E757691FA1566F00955418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E757671FA1566F00955418 /* Main.storyboard */; };
 		93E7576B1FA1566F00955418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576A1FA1566F00955418 /* Assets.xcassets */; };
 		93E7576E1FA1566F00955418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576C1FA1566F00955418 /* LaunchScreen.storyboard */; };
+		C9E05DC79A07D4CB3CDC984F /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B202A43E38E7380C1F228 /* Pods_GameNews.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271C30D38FDE487841B7C425 /* Pods-GameNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameNews/Pods-GameNews.release.xcconfig"; sourceTree = "<group>"; };
+		533B202A43E38E7380C1F228 /* Pods_GameNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931D57751FACCDE900AE90DB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../../../Downloads/SideMenuTutorial/SideMenuTutorial/SWRevealViewController.h; sourceTree = "<group>"; };
 		931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameNews-Bridging-Header.h"; sourceTree = "<group>"; };
 		931D57771FACCE3700AE90DB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		93E7576A1FA1566F00955418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E7576D1FA1566F00955418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93E7576F1FA1566F00955418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD012CD31528E940CAC17B9 /* Pods-GameNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameNews/Pods-GameNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E05DC79A07D4CB3CDC984F /* Pods_GameNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +150,8 @@
 			children = (
 				93E757621FA1566F00955418 /* GameNews */,
 				93E757611FA1566F00955418 /* Products */,
+				A97B38F09EC9B62E370F9D99 /* Pods */,
+				DEC8371E5178731EEC159E3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +182,23 @@
 			path = GameNews;
 			sourceTree = "<group>";
 		};
+		A97B38F09EC9B62E370F9D99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCD012CD31528E940CAC17B9 /* Pods-GameNews.debug.xcconfig */,
+				271C30D38FDE487841B7C425 /* Pods-GameNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEC8371E5178731EEC159E3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533B202A43E38E7380C1F228 /* Pods_GameNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93E757721FA1566F00955418 /* Build configuration list for PBXNativeTarget "GameNews" */;
 			buildPhases = (
+				786B198E3A03302008A8A287 /* [CP] Check Pods Manifest.lock */,
 				93E7575C1FA1566F00955418 /* Sources */,
 				93E7575D1FA1566F00955418 /* Frameworks */,
 				93E7575E1FA1566F00955418 /* Resources */,
+				91E85D1BE632BCBB8B0D4B5C /* [CP] Embed Pods Frameworks */,
+				2469698878316AC0BD2EB2E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2469698878316AC0BD2EB2E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameNews/Pods-GameNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		786B198E3A03302008A8A287 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91E85D1BE632BCBB8B0D4B5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93E7575C1FA1566F00955418 /* Sources */ = {
@@ -401,13 +486,14 @@
 		};
 		93E757731FA1566F00955418 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD012CD31528E940CAC17B9 /* Pods-GameNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,13 +506,14 @@
 		};
 		93E757741FA1566F00955418 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271C30D38FDE487841B7C425 /* Pods-GameNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2WXGK793Z;
 				INFOPLIST_FILE = GameNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miggsantos.GameNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
