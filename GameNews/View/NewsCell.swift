@@ -27,7 +27,7 @@ class NewsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(imageUrl: String, title: String, source: String, date: String) {
+    func configure(imageUrl: String, title: String, source: String, date: Date) {
         
         self.newsImage.image = UIImage(named: "sampleImage")
         self.title.text = "Call of Duty WWII Players Can Watch Each Other Open Loot Boxes"
@@ -37,5 +37,14 @@ class NewsCell: UITableViewCell {
         
     }
     
+    func configure(pulse: Pulse) {
+        
+        self.newsImage.image = UIImage(named: "sampleImage")
+        self.title.text = pulse.Title
+        self.source.text = pulse.Source
+        self.date.text = pulse.PublishDate
+        
+        
+    }
 
 }

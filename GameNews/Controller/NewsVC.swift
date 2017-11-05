@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
+var pulses = [Pulse]()
 
 class NewsVC: BaseVC {
 
@@ -24,6 +28,16 @@ class NewsVC: BaseVC {
         tableView.delegate = self
         tableView.dataSource = self
         
+        DataService.instance.getNews(completion: { (list) in
+            
+            print("Callback \(list.count)")
+            
+            pulses = list
+            
+            self.tableView.reloadData()
+        })
+        
+        
 
     }
     
@@ -36,7 +50,7 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return pulses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,7 +59,19 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: CELL_NEWS, for: indexPath) as? NewsCell {
 
-            cell.configure(imageUrl: "", title: "", source: "", date: "")
+            
+            if let p = pulses[indexPath.row] as Pulse? {
+                cell.configure(pulse: p)
+          
+                Alamofire.request(p.Image).responseImage { response in
+                    //debugPrint(response)
+                    
+                    if let image = response.result.value {
+                        cell.newsImage.image = image.af_imageAspectScaled(toFill: IMAGE_SIZE_PULSE_NEWS)
+                    }
+                }
+              }
+            
             
             return cell
             

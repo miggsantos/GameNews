@@ -10,6 +10,10 @@
 		931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D57771FACCE3700AE90DB /* SWRevealViewController.m */; };
 		931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57791FACF6A700AE90DB /* BaseVC.swift */; };
 		931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D577B1FAD0F3A00AE90DB /* NewsCell.swift */; };
+		931D577F1FAD412800AE90DB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D577E1FAD412800AE90DB /* DataService.swift */; };
+		931D57811FAE04AB00AE90DB /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57801FAE04AB00AE90DB /* Pulse.swift */; };
+		931D57841FAEA12000AE90DB /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 931D57831FAEA12000AE90DB /* keys.plist */; };
+		931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57851FAEA2E700AE90DB /* ConfigUtil.swift */; };
 		9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373243C1FA3F9CF007B155C /* AboutVC.swift */; };
 		93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */; };
 		93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */; };
@@ -40,6 +44,10 @@
 		931D57771FACCE3700AE90DB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		931D57791FACF6A700AE90DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		931D577B1FAD0F3A00AE90DB /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		931D577E1FAD412800AE90DB /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		931D57801FAE04AB00AE90DB /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
+		931D57831FAEA12000AE90DB /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		931D57851FAEA2E700AE90DB /* ConfigUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigUtil.swift; sourceTree = "<group>"; };
 		9373243C1FA3F9CF007B155C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -76,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		931D577D1FAD40F600AE90DB /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				931D577E1FAD412800AE90DB /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		93E611BB1FA2B7DB00C0A703 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,7 @@
 		93E611BD1FA2B7ED00C0A703 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				931D57801FAE04AB00AE90DB /* Pulse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				93E611D91FA2CA6E00C0A703 /* Constants.swift */,
+				931D57851FAEA2E700AE90DB /* ConfigUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -166,6 +184,7 @@
 		93E757621FA1566F00955418 /* GameNews */ = {
 			isa = PBXGroup;
 			children = (
+				931D577D1FAD40F600AE90DB /* DataService */,
 				93E611DB1FA2CC6C00C0A703 /* Protocols */,
 				93E611D81FA2CA4F00C0A703 /* Utilities */,
 				93E611BF1FA2B7FC00C0A703 /* Extensions */,
@@ -177,6 +196,7 @@
 				93E757671FA1566F00955418 /* Main.storyboard */,
 				93E7576A1FA1566F00955418 /* Assets.xcassets */,
 				93E7576C1FA1566F00955418 /* LaunchScreen.storyboard */,
+				931D57831FAEA12000AE90DB /* keys.plist */,
 				93E7576F1FA1566F00955418 /* Info.plist */,
 			);
 			path = GameNews;
@@ -262,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931D57841FAEA12000AE90DB /* keys.plist in Resources */,
 				93E7576E1FA1566F00955418 /* LaunchScreen.storyboard in Resources */,
 				93E611D11FA2B81D00C0A703 /* OpenSans-Regular.ttf in Resources */,
 				93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */,
@@ -346,12 +367,15 @@
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
 				931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */,
 				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,
+				931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */,
 				9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */,
 				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
 				931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */,
+				931D57811FAE04AB00AE90DB /* Pulse.swift in Sources */,
 				93E757661FA1566F00955418 /* NewsVC.swift in Sources */,
 				93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */,
 				93E757641FA1566F00955418 /* AppDelegate.swift in Sources */,
+				931D577F1FAD412800AE90DB /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
