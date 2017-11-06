@@ -16,14 +16,16 @@ class Pulse {
     private var url: String
     private var pulse_source: String
     private var publish_date_milliseconds: String
+    private var summary: String
     
-    init(id: String, title: String, imageUrl: String, url:String, source:String, publishDate:String) {
+    init(id: String, title: String, imageUrl: String, url:String, source:String, publishDate:String, summary:String) {
         self.id = id
         self.title = title
         self.image = imageUrl
         self.url = url
         self.pulse_source = source
         self.publish_date_milliseconds = publishDate
+        self.summary = summary
     }
     
     var PublishDate: String {
@@ -75,6 +77,15 @@ class Pulse {
         }
         set {
             self.pulse_source = newValue
+        }
+    }
+    
+    var Summary: String {
+        get {
+            return summary
+        }
+        set {
+            self.summary = newValue
         }
     }
     

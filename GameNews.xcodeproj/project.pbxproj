@@ -14,7 +14,11 @@
 		931D57811FAE04AB00AE90DB /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57801FAE04AB00AE90DB /* Pulse.swift */; };
 		931D57841FAEA12000AE90DB /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 931D57831FAEA12000AE90DB /* keys.plist */; };
 		931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57851FAEA2E700AE90DB /* ConfigUtil.swift */; };
+		931D57881FAEBA5B00AE90DB /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57871FAEBA5B00AE90DB /* ArticleVC.swift */; };
 		9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373243C1FA3F9CF007B155C /* AboutVC.swift */; };
+		937859241FAF3FED00ADFBF6 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937859231FAF3FED00ADFBF6 /* ArticleCell.swift */; };
+		937859281FAFA7A900ADFBF6 /* RoundShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */; };
+		9378592A1FAFA95A00ADFBF6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937859291FAFA95A00ADFBF6 /* WebVC.swift */; };
 		93E611CA1FA2B81D00C0A703 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */; };
 		93E611CB1FA2B81D00C0A703 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */; };
 		93E611CC1FA2B81D00C0A703 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */; };
@@ -48,7 +52,11 @@
 		931D57801FAE04AB00AE90DB /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
 		931D57831FAEA12000AE90DB /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		931D57851FAEA2E700AE90DB /* ConfigUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigUtil.swift; sourceTree = "<group>"; };
+		931D57871FAEBA5B00AE90DB /* ArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
 		9373243C1FA3F9CF007B155C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		937859231FAF3FED00ADFBF6 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowButton.swift; sourceTree = "<group>"; };
+		937859291FAFA95A00ADFBF6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		93E611C01FA2B81B00C0A703 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		93E611C11FA2B81C00C0A703 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		93E611C21FA2B81C00C0A703 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 				93E611D41FA2BD5F00C0A703 /* LeftSideMenuVC.swift */,
 				9373243C1FA3F9CF007B155C /* AboutVC.swift */,
 				931D57791FACF6A700AE90DB /* BaseVC.swift */,
+				931D57871FAEBA5B00AE90DB /* ArticleVC.swift */,
+				937859291FAFA95A00ADFBF6 /* WebVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,8 +116,10 @@
 		93E611BC1FA2B7E400C0A703 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */,
 				93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */,
 				931D577B1FAD0F3A00AE90DB /* NewsCell.swift */,
+				937859231FAF3FED00ADFBF6 /* ArticleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,13 +379,17 @@
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
 				931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */,
 				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,
+				937859281FAFA7A900ADFBF6 /* RoundShadowButton.swift in Sources */,
 				931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */,
 				9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */,
+				931D57881FAEBA5B00AE90DB /* ArticleVC.swift in Sources */,
 				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
 				931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */,
+				937859241FAF3FED00ADFBF6 /* ArticleCell.swift in Sources */,
 				931D57811FAE04AB00AE90DB /* Pulse.swift in Sources */,
 				93E757661FA1566F00955418 /* NewsVC.swift in Sources */,
 				93E611D51FA2BD5F00C0A703 /* LeftSideMenuVC.swift in Sources */,
+				9378592A1FAFA95A00ADFBF6 /* WebVC.swift in Sources */,
 				93E757641FA1566F00955418 /* AppDelegate.swift in Sources */,
 				931D577F1FAD412800AE90DB /* DataService.swift in Sources */,
 			);

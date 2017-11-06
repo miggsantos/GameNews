@@ -36,11 +36,20 @@ class NewsVC: BaseVC {
             
             self.tableView.reloadData()
         })
-        
-        
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ 
+        if segue.identifier == SEGUE_TO_ARTICLE_VC {
+            if let detailsVC = segue.destination as? ArticleVC {
+                if let index = sender as? Int {
+                    detailsVC.selectedIndex = index
+                }
+            }
+        }
+    }
+
 }
 
 extension NewsVC: UITableViewDelegate, UITableViewDataSource {
@@ -84,7 +93,10 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
         return 280
     }
     
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: SEGUE_TO_ARTICLE_VC, sender: indexPath.row)
+    }
+
 }
+
 

@@ -50,7 +50,7 @@ extension LeftSideMenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        if let option = menuItemsVC[indexPath.row] as? String {
+        if let option = menuItemsVC[indexPath.row] as String? {
             
             self.performSegue(withIdentifier: option, sender: self)
         }

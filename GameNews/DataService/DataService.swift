@@ -41,7 +41,7 @@ class DataService {
                         
                         let sourceId = item["pulse_source"].stringValue
                         
-                        let p = Pulse(id: item["id"].stringValue, title: item["title"].stringValue, imageUrl: item["image"].stringValue, url: item["url"].stringValue, source: PULSE_SOURCES[sourceId] ?? "", publishDate: item["published_at"].stringValue )
+                        let p = Pulse(id: item["id"].stringValue, title: item["title"].stringValue, imageUrl: item["image"].stringValue, url: item["url"].stringValue, source: PULSE_SOURCES[sourceId] ?? "", publishDate: item["published_at"].stringValue, summary: item["summary"].stringValue )
                         
                         pulseList.append(p)
                     }
