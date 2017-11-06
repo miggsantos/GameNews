@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
+
 
 class ArticleVC: UIViewController {
     
@@ -27,23 +26,9 @@ class ArticleVC: UIViewController {
         
         let scrollView = collectionView as UIScrollView
         scrollView.delegate = self
-        
-        //collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
-     
-        //collectionView.collectionViewLayout = SnappingVCLayout()
-        
-    }
-    
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        collectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-    }
-    
-    
-    
 
+        
+    }
 
 }
 
@@ -66,18 +51,19 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_ARTICLE, for: indexPath) as? ArticleCell {
 
+
             if let p = pulses[indexPath.row] as Pulse? {
-                cell.configureCell(pulse: p)
+                cell.configure(pulse: p)
                 
                 cell.buttonOpenPage.addTarget(self, action: #selector(openPage(_:)), for: .touchUpInside)
                 cell.buttonOpenPage.pageUrl = p.Url
                 
-                Alamofire.request(p.Image).responseImage { response in
-                    //debugPrint(response)
-                    
-                    if let image = response.result.value {
-                        cell.imageArticle.image = image.af_imageAspectScaled(toFill: IMAGE_SIZE_PULSE_ARTICLE)
-                    }
+                if let image = DataService.instance.cachedImage(for: p.Image) {
+                    cell.imageArticle.image = image
+                } else {
+                    DataService.instance.getImage(imageUrl: p.Image, resize: IMAGE_SIZE_PULSE_ARTICLE, completion: { (imageResponse) in
+                        cell.imageArticle.image = imageResponse
+                    })
                 }
             }
 
@@ -113,13 +99,5 @@ extension ArticleVC: UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
         let itemHeight = collectionView.bounds.height
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    
-    
-    
-
 
 }
-
-
-
-

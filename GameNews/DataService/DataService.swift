@@ -8,13 +8,25 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
+
+extension UInt64 {
+    
+    func megabytes() -> UInt64 {
+        return self * 1024 * 1024
+    }
+    
+}
 
 class DataService {
     
     private var base_url = ""
     private var headers: HTTPHeaders = ["Accept":"application/json", "user-key": ""]
-    
+    private let imageCache = AutoPurgingImageCache(
+        memoryCapacity: UInt64(100).megabytes(),
+        preferredMemoryUsageAfterPurge: UInt64(60).megabytes()
+    )
 
     static let instance = DataService()
     
@@ -55,6 +67,48 @@ class DataService {
             completion(pulseList)
         }
     }
+    
+    func getImage(imageUrl: String, resize: CGSize?, completion: @escaping(_ result: UIImage?) -> Void) {
+        
+        Alamofire.request(imageUrl).responseImage { response in
+            //debugPrint(response)
+            switch response.result {
+                case .success( _):
+                    
+                    guard var image = response.result.value else { return }
+ 
+                    if(resize != nil) {
+                        image = image.af_imageAspectScaled(toFill: resize!)
+                        //completion(response.result.value?.af_imageAspectScaled(toFill: resize!))
+                    } else {
+                        //completion(response.result.value)
+                    }
+                    
+                    completion(image)
+                    self.cache(image, for: imageUrl)
+                    
+
+                    break;
+                case .failure(let error):
+                    print("Request image failed with error: \(error)")
+                    break;
+                
+            }
+   
+        }
+    }
+    
+    
+    //MARK: = Image Caching
+    
+    func cache(_ image: Image, for url: String) {
+        imageCache.add(image, withIdentifier: url)
+    }
+    
+    func cachedImage(for url: String) -> Image? {
+        return imageCache.image(withIdentifier: url)
+    }
+    
 
 }
 

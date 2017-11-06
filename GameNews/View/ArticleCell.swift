@@ -21,7 +21,7 @@ class ArticleCell: UICollectionViewCell {
         self.sizeToFit()
     }
     
-    func configureCell(pulse: Pulse){
+    func configure(pulse: Pulse){
         
         self.labelTitle.text = pulse.Title
         self.labelSummary.text = pulse.Summary

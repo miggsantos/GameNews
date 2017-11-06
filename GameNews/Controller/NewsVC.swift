@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
 
 var pulses = [Pulse]()
 
@@ -64,24 +62,20 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: CELL_NEWS, for: indexPath) as? NewsCell {
 
-            
             if let p = pulses[indexPath.row] as Pulse? {
                 cell.configure(pulse: p)
           
-                Alamofire.request(p.Image).responseImage { response in
-                    //debugPrint(response)
-                    
-                    if let image = response.result.value {
-                        cell.newsImage.image = image.af_imageAspectScaled(toFill: IMAGE_SIZE_PULSE_NEWS)
-                    }
+                if let image = DataService.instance.cachedImage(for: p.Image) {
+                    cell.newsImage.image = image
+                } else {
+                    DataService.instance.getImage(imageUrl: p.Image, resize: IMAGE_SIZE_PULSE_NEWS, completion: { (imageResponse) in
+                        cell.newsImage.image = imageResponse
+                    })
                 }
-              }
-            
-            
+            }
+
             return cell
             
         }
