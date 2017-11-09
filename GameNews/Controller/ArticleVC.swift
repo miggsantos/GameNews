@@ -58,12 +58,15 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.buttonOpenPage.addTarget(self, action: #selector(openPage(_:)), for: .touchUpInside)
                 cell.buttonOpenPage.pageUrl = p.Url
                 
-                if let image = DataService.instance.cachedImage(for: p.Image) {
-                    cell.imageArticle.image = image
-                } else {
-                    DataService.instance.getImage(imageUrl: p.Image, resize: IMAGE_SIZE_PULSE_ARTICLE, completion: { (imageResponse) in
-                        cell.imageArticle.image = imageResponse
-                    })
+                if p.Image != "" {
+                
+                    if let image = DataService.instance.cachedImage(for: "\(p.Image)Article")  {
+                        cell.imageArticle.image = image
+                    } else {
+                        DataService.instance.getImage(imageUrl: p.Image, pageType: .Article, completion: { (imageResponse) in
+                            cell.imageArticle.image = imageResponse
+                        })
+                    }
                 }
             }
 

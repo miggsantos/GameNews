@@ -42,8 +42,12 @@ class DataService {
     func getNews(completion: @escaping (_ result: [Pulse]) -> Void) {
         
         var pulseList = [Pulse]()
+
+      
         
-        Alamofire.request(base_url + IGDB_API_GET_PULSES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
+        Alamofire.SessionManager.default.requestWithCacheOrLoad(base_url + IGDB_API_GET_PULSES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
+
+        //Alamofire.request(base_url + IGDB_API_GET_PULSES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
     
             switch respData.result {
             case .success( _):
@@ -68,7 +72,7 @@ class DataService {
         }
     }
     
-    func getImage(imageUrl: String, resize: CGSize?, completion: @escaping(_ result: UIImage?) -> Void) {
+    func getImage(imageUrl: String, pageType: PageType, completion: @escaping(_ result: UIImage?) -> Void) {
         
         Alamofire.request(imageUrl).responseImage { response in
             //debugPrint(response)
@@ -77,17 +81,24 @@ class DataService {
                     
                     guard var image = response.result.value else { return }
  
+                    var resize: CGSize?
+                    
+                    switch pageType {
+                    case .News:
+                        resize = IMAGE_SIZE_PULSE_NEWS
+                        break
+                    case .Article:
+                        resize = IMAGE_SIZE_PULSE_ARTICLE
+                        break
+                    }
+                    
                     if(resize != nil) {
                         image = image.af_imageAspectScaled(toFill: resize!)
-                        //completion(response.result.value?.af_imageAspectScaled(toFill: resize!))
-                    } else {
-                        //completion(response.result.value)
                     }
                     
                     completion(image)
-                    self.cache(image, for: imageUrl)
-                    
-
+                    self.cache(image, for: "\(imageUrl)\(pageType)")
+ 
                     break;
                 case .failure(let error):
                     print("Request image failed with error: \(error)")

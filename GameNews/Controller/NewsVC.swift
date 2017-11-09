@@ -67,12 +67,15 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
             if let p = pulses[indexPath.row] as Pulse? {
                 cell.configure(pulse: p)
           
-                if let image = DataService.instance.cachedImage(for: p.Image) {
-                    cell.newsImage.image = image
-                } else {
-                    DataService.instance.getImage(imageUrl: p.Image, resize: IMAGE_SIZE_PULSE_NEWS, completion: { (imageResponse) in
-                        cell.newsImage.image = imageResponse
-                    })
+                if p.Image != "" {
+                
+                    if let image = DataService.instance.cachedImage(for: "\(p.Image)News") {
+                        cell.newsImage.image = image
+                    } else {
+                        DataService.instance.getImage(imageUrl: p.Image, pageType: .News, completion: { (imageResponse) in
+                            cell.newsImage.image = imageResponse
+                        })
+                    }
                 }
             }
 

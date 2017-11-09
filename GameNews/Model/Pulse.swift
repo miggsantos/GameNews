@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum PageType {
+    case News
+    case Article
+}
+
+
 class Pulse {
     
     private var id: String
