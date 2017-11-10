@@ -16,6 +16,7 @@
 		931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57851FAEA2E700AE90DB /* ConfigUtil.swift */; };
 		931D57881FAEBA5B00AE90DB /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57871FAEBA5B00AE90DB /* ArticleVC.swift */; };
 		9367AE0C1FB4E15C00036FA1 /* AlamofireSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367AE0B1FB4E15C00036FA1 /* AlamofireSessionManager.swift */; };
+		9367AE0E1FB5E4E000036FA1 /* NewsLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367AE0D1FB5E4E000036FA1 /* NewsLoadingCell.swift */; };
 		9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373243C1FA3F9CF007B155C /* AboutVC.swift */; };
 		937859241FAF3FED00ADFBF6 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937859231FAF3FED00ADFBF6 /* ArticleCell.swift */; };
 		937859281FAFA7A900ADFBF6 /* RoundShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */; };
@@ -55,6 +56,7 @@
 		931D57851FAEA2E700AE90DB /* ConfigUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigUtil.swift; sourceTree = "<group>"; };
 		931D57871FAEBA5B00AE90DB /* ArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
 		9367AE0B1FB4E15C00036FA1 /* AlamofireSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSessionManager.swift; sourceTree = "<group>"; };
+		9367AE0D1FB5E4E000036FA1 /* NewsLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLoadingCell.swift; sourceTree = "<group>"; };
 		9373243C1FA3F9CF007B155C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		937859231FAF3FED00ADFBF6 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowButton.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */,
 				931D577B1FAD0F3A00AE90DB /* NewsCell.swift */,
 				937859231FAF3FED00ADFBF6 /* ArticleCell.swift */,
+				9367AE0D1FB5E4E000036FA1 /* NewsLoadingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				931D57881FAEBA5B00AE90DB /* ArticleVC.swift in Sources */,
 				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
 				931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */,
+				9367AE0E1FB5E4E000036FA1 /* NewsLoadingCell.swift in Sources */,
 				937859241FAF3FED00ADFBF6 /* ArticleCell.swift in Sources */,
 				931D57811FAE04AB00AE90DB /* Pulse.swift in Sources */,
 				9367AE0C1FB4E15C00036FA1 /* AlamofireSessionManager.swift in Sources */,

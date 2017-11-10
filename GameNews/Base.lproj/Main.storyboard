@@ -117,6 +117,24 @@
                                             <outlet property="title" destination="xs9-7M-cWS" id="mgy-QK-aUk"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCellNews" id="heV-kl-oRo">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="heV-kl-oRo" id="rSa-Hx-E0p">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="O4u-zf-gOh">
+                                                    <rect key="frame" x="197" y="12" width="20" height="20"/>
+                                                    <color key="color" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="O4u-zf-gOh" firstAttribute="centerX" secondItem="rSa-Hx-E0p" secondAttribute="centerX" id="XKz-T0-p3d"/>
+                                                <constraint firstItem="O4u-zf-gOh" firstAttribute="centerY" secondItem="rSa-Hx-E0p" secondAttribute="centerY" id="znS-P8-DBx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -160,15 +178,33 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="ex6-if-ySJ" customClass="ArticleCell" customModule="GameNews" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadingCellArticle" id="EoG-pp-dDu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <activityIndicatorView opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-WB-aWw">
+                                                    <rect key="frame" x="197" y="326" width="20" height="20"/>
+                                                    <color key="color" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kMb-WB-aWw" firstAttribute="centerX" secondItem="EoG-pp-dDu" secondAttribute="centerX" id="XAS-dg-9xo"/>
+                                            <constraint firstItem="kMb-WB-aWw" firstAttribute="centerY" secondItem="EoG-pp-dDu" secondAttribute="centerY" id="jgJ-es-Wve"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="ex6-if-ySJ" customClass="ArticleCell" customModule="GameNews" customModuleProvider="target">
+                                        <rect key="frame" x="414" y="0.0" width="414" height="672"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blm-Ms-zjZ">
-                                                    <rect key="frame" x="8" y="308" width="398" height="100"/>
+                                                    <rect key="frame" x="20" y="308" width="374" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="H6J-sT-0gX"/>
                                                     </constraints>
@@ -183,14 +219,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-wq-KB9" customClass="RoundShadowButton" customModule="GameNews" customModuleProvider="target">
-                                                    <rect key="frame" x="166" y="604" width="82" height="30"/>
+                                                    <rect key="frame" x="166" y="612" width="82" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="o0Y-vB-ZRY"/>
                                                     </constraints>
                                                     <state key="normal" title="OPEN PAGE"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-1o-Ka0">
-                                                    <rect key="frame" x="8" y="418" width="398" height="156"/>
+                                                    <rect key="frame" x="20" y="418" width="374" height="164"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

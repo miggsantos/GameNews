@@ -9,11 +9,20 @@
 import UIKit
 
 var pulses = [Pulse]()
+let maxPages = 5
+let totalItems = 100
+let pageSize = 20
+let totalPages = 5
+
+
 
 class NewsVC: BaseVC {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    
+    var canLoadData = false
+    var currentPage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +35,23 @@ class NewsVC: BaseVC {
         tableView.delegate = self
         tableView.dataSource = self
         
-        DataService.instance.getNews(completion: { (list) in
-            
-            print("Callback \(list.count)")
-            
-            pulses = list
-            
-            self.tableView.reloadData()
-        })
+ 
+        getData(offset: 0)
 
+    }
+    
+    
+    func getData(offset:Int){
+        
+        print("getData News \(offset)")
+        
+        DataService.getInstance().getNews(offset: offset, completion: { (list) in
+ 
+            pulses.append(contentsOf: list)
+
+            self.tableView.reloadData()
+            self.canLoadData = true
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,27 +69,57 @@ class NewsVC: BaseVC {
 
 extension NewsVC: UITableViewDelegate, UITableViewDataSource {
     
+ 
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pulses.count
+ 
+        if (self.currentPage == maxPages
+            || self.currentPage == totalPages
+            || totalItems == pulses.count) {
+            return pulses.count;
+        }
+        return pulses.count + 1;
+        
+        //return pulses.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // load more data
+        if indexPath.row == pulses.count - 1 && canLoadData {
+            print("willDisplay News \(pulses.count)")
+            canLoadData = false
+            currentPage+=1
+            getData(offset: currentPage * pageSize)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: CELL_NEWS, for: indexPath) as? NewsCell {
+        var cell: UITableViewCell //CELL_NEWS_LOADING
+        
+        if indexPath.row == pulses.count {
+            cell = tableView.dequeueReusableCell(withIdentifier: CELL_NEWS_LOADING, for: indexPath)
+            if let activityIndicator = cell.contentView.viewWithTag(100) as? UIActivityIndicatorView {
+                activityIndicator.startAnimating()
+            }
+            return cell
+        }
+        else if let cell = tableView.dequeueReusableCell(withIdentifier: CELL_NEWS, for: indexPath) as? NewsCell {
 
             if let p = pulses[indexPath.row] as Pulse? {
                 cell.configure(pulse: p)
-          
+                cell.newsImage.image = UIImage(named: "placeholder.jpg")
+                
                 if p.Image != "" {
                 
-                    if let image = DataService.instance.cachedImage(for: "\(p.Image)News") {
+                    if let image = DataService.getInstance().cachedImage(for: "\(p.Image)News") {
                         cell.newsImage.image = image
                     } else {
-                        DataService.instance.getImage(imageUrl: p.Image, pageType: .News, completion: { (imageResponse) in
+                        DataService.getInstance().getImage(imageUrl: p.Image, pageType: .News, completion: { (imageResponse) in
                             cell.newsImage.image = imageResponse
                         })
                     }

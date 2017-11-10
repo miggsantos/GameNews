@@ -28,9 +28,18 @@ class DataService {
         preferredMemoryUsageAfterPurge: UInt64(60).megabytes()
     )
 
-    static let instance = DataService()
+    private static var instance: DataService?
     
-    init(){
+    public static func getInstance() -> DataService{
+    
+        if(instance == nil){
+            instance = DataService()
+        }
+    
+        return instance!
+    }
+    
+    private init(){
         
         print("DataService init")
         
@@ -39,18 +48,21 @@ class DataService {
         headers["user-key"] = key
     }
     
-    func getNews(completion: @escaping (_ result: [Pulse]) -> Void) {
+    func getNews(offset: Int, completion: @escaping (_ result: [Pulse]) -> Void) {
         
         var pulseList = [Pulse]()
 
-      
+        let url = base_url + IGDB_API_GET_PULSES.replacingOccurrences(of: "{OFFSET}", with: String(pulses.count) )
         
-        Alamofire.SessionManager.default.requestWithCacheOrLoad(base_url + IGDB_API_GET_PULSES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
+        Alamofire.SessionManager.default.requestWithCacheOrLoad(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
 
         //Alamofire.request(base_url + IGDB_API_GET_PULSES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (respData) in
     
             switch respData.result {
             case .success( _):
+                
+                
+                //respData.response?.allHeaderFields["x"]
                 
                     let json = JSON((data: respData.result.value!))
                     for item in json.arrayValue {
@@ -93,6 +105,7 @@ class DataService {
                     }
                     
                     if(resize != nil) {
+
                         image = image.af_imageAspectScaled(toFill: resize!)
                     }
                     

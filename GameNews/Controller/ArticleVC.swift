@@ -29,6 +29,17 @@ class ArticleVC: UIViewController {
 
         
     }
+    
+    func getData(offset: Int){
+
+        print("getData Article \(offset)")
+        DataService.getInstance().getNews(offset: offset, completion: { (list) in
+
+            pulses.append(contentsOf: list)
+            print("Callback Article \(list.count)")
+            self.collectionView.reloadData()
+        })
+    }
 
 }
 
@@ -41,16 +52,42 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
             self.collectionView.scrollToItem(at: indexToScrollTo, at: .left, animated: false)
             hasSetFirstPosition = true
         }
+        
+        // load more data
+        if indexPath.row == pulses.count - 1 {
+            getData(offset: pulses.count);
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pulses.count
+        //return pulses.count
+        if(pulses.count < 10){
+            return pulses.count
+        }
+        
+        let currentPage = (pulses.count / 10)
+        
+        if (currentPage == totalPages || totalItems == pulses.count) {
+            return pulses.count;
+        }
+        return pulses.count + 1;
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_ARTICLE, for: indexPath) as? ArticleCell {
-
+        
+        var cell: UICollectionViewCell
+        
+        if indexPath.row == pulses.count {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_ARTICLE_LOADING, for: indexPath)
+            if let activityIndicator = cell.contentView.viewWithTag(101) as? UIActivityIndicatorView {
+                activityIndicator.startAnimating()
+            }
+            return cell
+        }
+        else if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_ARTICLE, for: indexPath) as? ArticleCell {
 
             if let p = pulses[indexPath.row] as Pulse? {
                 cell.configure(pulse: p)
@@ -58,23 +95,27 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.buttonOpenPage.addTarget(self, action: #selector(openPage(_:)), for: .touchUpInside)
                 cell.buttonOpenPage.pageUrl = p.Url
                 
+                cell.imageArticle.image = UIImage(named: "placeholder.jpg")
+                
                 if p.Image != "" {
                 
-                    if let image = DataService.instance.cachedImage(for: "\(p.Image)Article")  {
+                    if let image = DataService.getInstance().cachedImage(for: "\(p.Image)Article")  {
                         cell.imageArticle.image = image
                     } else {
-                        DataService.instance.getImage(imageUrl: p.Image, pageType: .Article, completion: { (imageResponse) in
+                        DataService.getInstance().getImage(imageUrl: p.Image, pageType: .Article, completion: { (imageResponse) in
                             cell.imageArticle.image = imageResponse
                         })
                     }
                 }
             }
-
+            
             return cell
         }
 
         return UICollectionViewCell()
     }
+    
+
     
     @objc func openPage(_ button:RoundShadowButton){
         
