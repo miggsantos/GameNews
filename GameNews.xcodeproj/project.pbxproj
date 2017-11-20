@@ -109,7 +109,6 @@
 			children = (
 				936D09591FC39774002D6A41 /* SWRevealViewController.h */,
 				931D57771FACCE3700AE90DB /* SWRevealViewController.m */,
-				931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */,
 			);
 			path = SWRevealViewController;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				936D09581FC3975D002D6A41 /* SWRevealViewController */,
+				931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */,
 				9367AE0B1FB4E15C00036FA1 /* AlamofireSessionManager.swift */,
 			);
 			path = Extensions;
