@@ -112,18 +112,6 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
 
             if let p = pulses[indexPath.row] as Pulse? {
                 cell.configure(pulse: p)
-                cell.newsImage.image = UIImage(named: "placeholder.jpg")
-                
-                if p.Image != "" {
-                
-                    if let image = DataService.getInstance().cachedImage(for: "\(p.Image)News") {
-                        cell.newsImage.image = image
-                    } else {
-                        DataService.getInstance().getImage(imageUrl: p.Image, pageType: .News, completion: { (imageResponse) in
-                            cell.newsImage.image = imageResponse
-                        })
-                    }
-                }
             }
 
             return cell

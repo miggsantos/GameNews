@@ -94,19 +94,7 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 
                 cell.buttonOpenPage.addTarget(self, action: #selector(openPage(_:)), for: .touchUpInside)
                 cell.buttonOpenPage.pageUrl = p.Url
-                
-                cell.imageArticle.image = UIImage(named: "placeholder.jpg")
-                
-                if p.Image != "" {
-                
-                    if let image = DataService.getInstance().cachedImage(for: "\(p.Image)Article")  {
-                        cell.imageArticle.image = image
-                    } else {
-                        DataService.getInstance().getImage(imageUrl: p.Image, pageType: .Article, completion: { (imageResponse) in
-                            cell.imageArticle.image = imageResponse
-                        })
-                    }
-                }
+ 
             }
             
             return cell

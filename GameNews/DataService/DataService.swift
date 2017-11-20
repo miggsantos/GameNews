@@ -115,6 +115,7 @@ class DataService {
                     break;
                 case .failure(let error):
                     print("Request image failed with error: \(error)")
+                    completion(nil)
                     break;
                 
             }

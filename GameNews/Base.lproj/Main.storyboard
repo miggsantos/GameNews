@@ -60,7 +60,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dx5-g8-qoM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dx5-g8-qoM">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="190" id="f5r-2Z-tOV"/>
@@ -76,16 +76,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YdA-Oy-kgV">
-                                                    <rect key="frame" x="8" y="256" width="169.33333333333334" height="21"/>
+                                                    <rect key="frame" x="8" y="256" width="168.33333333333334" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCHARCADE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-UM-dty">
-                                                            <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="21"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
                                                             <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 20:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-rm-FLD">
-                                                            <rect key="frame" x="98.333333333333314" y="0.0" width="71" height="21"/>
+                                                            <rect key="frame" x="100.33333333333331" y="0.0" width="68" height="21"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -484,6 +484,7 @@
     </scenes>
     <resources>
         <image name="menuBtn" width="30" height="30"/>
+        <image name="placeholder" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w3l-FX-HBZ"/>
