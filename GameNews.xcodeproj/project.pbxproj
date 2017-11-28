@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9318435F1FC46BEC0058B5F9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9318435E1FC46BEC0058B5F9 /* GradientView.swift */; };
 		931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D57771FACCE3700AE90DB /* SWRevealViewController.m */; };
 		931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D57791FACF6A700AE90DB /* BaseVC.swift */; };
 		931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D577B1FAD0F3A00AE90DB /* NewsCell.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		271C30D38FDE487841B7C425 /* Pods-GameNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameNews/Pods-GameNews.release.xcconfig"; sourceTree = "<group>"; };
 		533B202A43E38E7380C1F228 /* Pods_GameNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9318435E1FC46BEC0058B5F9 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		931D57761FACCE3600AE90DB /* GameNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameNews-Bridging-Header.h"; sourceTree = "<group>"; };
 		931D57771FACCE3700AE90DB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		931D57791FACF6A700AE90DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		93E611BC1FA2B7E400C0A703 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9318435E1FC46BEC0058B5F9 /* GradientView.swift */,
 				937859271FAFA7A800ADFBF6 /* RoundShadowButton.swift */,
 				93E611DE1FA3E5FA00C0A703 /* LeftMenuCell.swift */,
 				931D577B1FAD0F3A00AE90DB /* NewsCell.swift */,
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9318435F1FC46BEC0058B5F9 /* GradientView.swift in Sources */,
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
 				931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */,
 				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,

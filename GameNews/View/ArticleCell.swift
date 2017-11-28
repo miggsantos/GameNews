@@ -15,6 +15,8 @@ class ArticleCell: UICollectionViewCell {
     @IBOutlet weak var labelSummary: UILabel!
     @IBOutlet weak var imageArticle: UIImageView!
     @IBOutlet weak var buttonOpenPage: RoundShadowButton!
+    @IBOutlet weak var source: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     let placeholderImage = UIImage(named: "placeholder")
     
@@ -28,6 +30,8 @@ class ArticleCell: UICollectionViewCell {
         
         self.labelTitle.text = pulse.Title
         self.labelSummary.text = pulse.Summary
+        self.source.text = pulse.Source
+        self.date.text = pulse.PublishDate
         
         let size = imageArticle.frame.size
         if pulse.Image != "" {
