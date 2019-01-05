@@ -1,6 +1,2 @@
-# Vendored dependencies
-- third[-_]?party/
-- 3rd[-_]?party/
-- vendors?/
-- extern(al)?/
-- (^|/)[Vv]+endor/
+# direct swift
+*.* linguist-language=Swift
