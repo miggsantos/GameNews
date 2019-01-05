@@ -40,6 +40,10 @@
 		93E757691FA1566F00955418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E757671FA1566F00955418 /* Main.storyboard */; };
 		93E7576B1FA1566F00955418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576A1FA1566F00955418 /* Assets.xcassets */; };
 		93E7576E1FA1566F00955418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E7576C1FA1566F00955418 /* LaunchScreen.storyboard */; };
+		93FBB5361FCDCFD300E0D839 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBB5351FCDCFD300E0D839 /* RealmConfig.swift */; };
+		93FBB53A1FCE3B8900E0D839 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBB5391FCE3B8900E0D839 /* Bookmark.swift */; };
+		93FBB53C1FCE3BAE00E0D839 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBB53B1FCE3BAE00E0D839 /* Source.swift */; };
+		93FBB53E1FCE3BBD00E0D839 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBB53D1FCE3BBD00E0D839 /* Platform.swift */; };
 		C9E05DC79A07D4CB3CDC984F /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B202A43E38E7380C1F228 /* Pods_GameNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,10 @@
 		93E7576A1FA1566F00955418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E7576D1FA1566F00955418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93E7576F1FA1566F00955418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93FBB5351FCDCFD300E0D839 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		93FBB5391FCE3B8900E0D839 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		93FBB53B1FCE3BAE00E0D839 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		93FBB53D1FCE3BBD00E0D839 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		FCD012CD31528E940CAC17B9 /* Pods-GameNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameNews/Pods-GameNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				931D577E1FAD412800AE90DB /* DataService.swift */,
+				93C909C121E1278000CD224B /* New Group */,
 			);
 			path = DataService;
 			sourceTree = "<group>";
@@ -113,6 +122,13 @@
 				931D57771FACCE3700AE90DB /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		93C909C121E1278000CD224B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		93E611BB1FA2B7DB00C0A703 /* Controller */ = {
@@ -145,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				931D57801FAE04AB00AE90DB /* Pulse.swift */,
+				93FBB5391FCE3B8900E0D839 /* Bookmark.swift */,
+				93FBB53B1FCE3BAE00E0D839 /* Source.swift */,
+				93FBB53D1FCE3BBD00E0D839 /* Platform.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 			children = (
 				93E611D91FA2CA6E00C0A703 /* Constants.swift */,
 				931D57851FAEA2E700AE90DB /* ConfigUtil.swift */,
+				93FBB5351FCDCFD300E0D839 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -373,12 +393,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,9 +421,13 @@
 				93E611DA1FA2CA6E00C0A703 /* Constants.swift in Sources */,
 				931D577C1FAD0F3A00AE90DB /* NewsCell.swift in Sources */,
 				93E611DF1FA3E5FA00C0A703 /* LeftMenuCell.swift in Sources */,
+				93FBB53C1FCE3BAE00E0D839 /* Source.swift in Sources */,
 				937859281FAFA7A900ADFBF6 /* RoundShadowButton.swift in Sources */,
+				93FBB53A1FCE3B8900E0D839 /* Bookmark.swift in Sources */,
 				931D57861FAEA2E700AE90DB /* ConfigUtil.swift in Sources */,
 				9373243D1FA3F9CF007B155C /* AboutVC.swift in Sources */,
+				93FBB53E1FCE3BBD00E0D839 /* Platform.swift in Sources */,
+				93FBB5361FCDCFD300E0D839 /* RealmConfig.swift in Sources */,
 				931D57881FAEBA5B00AE90DB /* ArticleVC.swift in Sources */,
 				931D577A1FACF6A700AE90DB /* BaseVC.swift in Sources */,
 				931D57781FACCE3700AE90DB /* SWRevealViewController.m in Sources */,

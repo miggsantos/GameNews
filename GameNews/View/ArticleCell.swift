@@ -34,9 +34,9 @@ class ArticleCell: UICollectionViewCell {
         self.date.text = pulse.PublishDate
         
         let size = imageArticle.frame.size
-        if pulse.Image != "" {
+        if pulse.ImageUrl != "" {
             self.imageArticle.af_setImage(
-                withURL: URL(string: pulse.Image)!,
+                withURL: URL(string: pulse.ImageUrl)!,
                 placeholderImage: placeholderImage,
                 filter: AspectScaledToFillSizeFilter(size: size),
                 imageTransition: .crossDissolve(0.2)

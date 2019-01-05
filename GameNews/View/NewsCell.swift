@@ -46,9 +46,9 @@ class NewsCell: UITableViewCell {
         self.date.text = pulse.PublishDate
         
         let size = newsImage.frame.size
-        if pulse.Image != "" {
+        if pulse.ImageUrl != "" {
             self.newsImage.af_setImage(
-                withURL: URL(string: pulse.Image)!,
+                withURL: URL(string: pulse.ImageUrl)!,
                 placeholderImage: placeholderImage,
                 filter: AspectScaledToFillSizeFilter(size: size),
                 imageTransition: .crossDissolve(0.2)
