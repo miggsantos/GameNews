@@ -19,6 +19,7 @@ Was built using swift, with the following libraries:
 For the app to work: 
 
 1 - You have to get a key from igdb.com website.
+
 2 - Paste the key in the GameNews/keys.plist file in the IGDB_KEY field value
 
 ### Developmentent status ###
