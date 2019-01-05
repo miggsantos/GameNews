@@ -1,29 +1,24 @@
-# README #
+### GAME NEWS V1 ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The app about game news built to train myself as IOS developer :)
 
-### What is this repository for? ###
+### Tech ###
+It uses the igdb.com API (v3) to fetch the news.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Was built using swift, with the following libraries:
 
-### How do I get set up? ###
+* Alamofire - to fetch the data
+* AlamofireImage - to do image transformations
+* SwiftyJSON - to made the life easier to decode the json from the api
+* RealmSwift - to be used in the future to store the favorite news
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### How to use ###
 
-### Contribution guidelines ###
+For the app to work: 
 
-* Writing tests
-* Code review
-* Other guidelines
+1 - You have to get a key from igdb.com website.
+2 - Paste the key in the GameNews/keys.plist file in the IGDB_KEY field value
 
-### Who do I talk to? ###
+### Developmentent status ###
 
-* Repo owner or admin
-* Other community or team contact
+![](games_news_200_5.gif)
