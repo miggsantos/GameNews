@@ -106,10 +106,13 @@ extension ArticleVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
     
     @objc func openPage(_ button:RoundShadowButton){
-        
+
+        // Bronken in api v3
+        /*
         if let url = button.pageUrl {
             self.performSegue(withIdentifier: SEGUE_TO_WEB_VC, sender: url)
         }
+        */
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
